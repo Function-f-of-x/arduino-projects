@@ -1,0 +1,23 @@
+#line 1 "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\!Sketches\\STM32\\Blinking_on_the_board\\.vscode\\arduino.json"
+{
+  "port": "COM26",
+  "configuration": "pnum=BLUEPILL_F103C6,xserial=generic,usb=none,xusb=FS,opt=oslto,dbg=none,rtlib=nanofp,upload_method=OpenOCDSTLink",
+  "output": "build",
+  "board": "STMicroelectronics:stm32:GenF1",
+  "programmer": "",
+  "useProgrammer": false,
+  "optimize_for_debug": false,
+  "configurationRequired": true,
+  "compile_profile": "",
+  "monitorPortSettings": {
+    "settings": {
+      "port": "COM26",
+      "baudRate": 115200,
+      "lineEnding": "\r\n",
+      "dataBits": 8,
+      "parity": "none",
+      "stopBits": "one"
+    },
+    "profile_name": ""
+  }
+}

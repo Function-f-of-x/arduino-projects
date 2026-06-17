@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "..\\..\\..,..\\..\\..,..\\..\\..",
+  "compiler.optimization_flags": "{build.flags.optimize} {build.flags.debug}",
+  "customBuildProperties": "",
+  "fqbn": "STMicroelectronics:stm32:GenF1:pnum=BLUEPILL_F103C6,xserial=generic,usb=none,xusb=FS,opt=oslto,dbg=none,rtlib=nanofp,upload_method=OpenOCDSTLink",
+  "hardwareFolders": "C:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0,C:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0",
+  "otherLibrariesFolders": "C:\\Users\\Klim\\Documents\\Arduino\\libraries",
+  "sketchLocation": "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\stm_test"
+}

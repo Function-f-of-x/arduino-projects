@@ -1,1 +1,0 @@
-bdfconv -f 1 -m "0-1169" -n MFont12x9CyrillicGreek -o MFont12x9CyrillicGreek.c Untitled.bdf

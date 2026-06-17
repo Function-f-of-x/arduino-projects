@@ -1,2 +1,0 @@
-K:\Arduino\!Sketches\stm_test\build\libraries\SrcWrapper\HAL\stm32yyxx_hal_i3c.c.o: \
- C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\libraries\SrcWrapper\src\HAL\stm32yyxx_hal_i3c.c
