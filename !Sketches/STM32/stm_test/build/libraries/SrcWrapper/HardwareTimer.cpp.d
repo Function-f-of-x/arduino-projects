@@ -1,4 +1,4 @@
-C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\Arduino\!Sketches\stm_test\build\libraries\SrcWrapper\HardwareTimer.cpp.o: \
+C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\!Sketches\STM32\stm_test\build\libraries\SrcWrapper\HardwareTimer.cpp.o: \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\libraries\SrcWrapper\src\HardwareTimer.cpp \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\cores\arduino/Arduino.h \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\cores\arduino/wiring.h \

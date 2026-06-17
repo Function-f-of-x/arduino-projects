@@ -1,4 +1,4 @@
-C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\Arduino\!Sketches\stm_test\build\libraries\SrcWrapper\stm32\uart.c.o: \
+C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\!Sketches\STM32\stm_test\build\libraries\SrcWrapper\stm32\uart.c.o: \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\libraries\SrcWrapper\src\stm32\uart.c \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\cores\arduino/core_debug.h \
  C:/Users/Klim/AppData/Local/Arduino15/packages/STMicroelectronics/hardware/stm32/2.12.0/libraries/SrcWrapper/inc/lock_resource.h \

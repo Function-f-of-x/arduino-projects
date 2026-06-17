@@ -1,4 +1,4 @@
-C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\Arduino\!Sketches\stm_test\build\libraries\SrcWrapper\stm32\dwt.c.o: \
+C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\!Sketches\STM32\stm_test\build\libraries\SrcWrapper\stm32\dwt.c.o: \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\libraries\SrcWrapper\src\stm32\dwt.c \
  C:/Users/Klim/AppData/Local/Arduino15/packages/STMicroelectronics/hardware/stm32/2.12.0/libraries/SrcWrapper/inc/dwt.h \
  C:/Users/Klim/AppData/Local/Arduino15/packages/STMicroelectronics/hardware/stm32/2.12.0/libraries/SrcWrapper/inc/stm32_def.h \

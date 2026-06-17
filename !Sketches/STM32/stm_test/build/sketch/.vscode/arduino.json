@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\stm_test\\.vscode\\arduino.json"
+#line 1 "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\!Sketches\\STM32\\stm_test\\.vscode\\arduino.json"
 {
   "port": "COM26",
   "configuration": "pnum=BLUEPILL_F103C6,xserial=generic,usb=none,xusb=FS,opt=oslto,dbg=none,rtlib=nanofp,upload_method=OpenOCDSTLink",

@@ -1,4 +1,4 @@
-C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\Arduino\!Sketches\stm_test\build\libraries\SrcWrapper\stm32\system_stm32yyxx.c.o: \
+C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\!Sketches\STM32\stm_test\build\libraries\SrcWrapper\stm32\system_stm32yyxx.c.o: \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\libraries\SrcWrapper\src\stm32\system_stm32yyxx.c \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\system/STM32F1xx/system_stm32f1xx.c \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\system/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \

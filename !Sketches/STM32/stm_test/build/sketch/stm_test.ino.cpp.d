@@ -1,5 +1,5 @@
-C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\Arduino\!Sketches\stm_test\build\sketch\stm_test.ino.cpp.o: \
- C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\Arduino\!Sketches\stm_test\build\sketch\stm_test.ino.cpp \
+C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\!Sketches\STM32\stm_test\build\sketch\stm_test.ino.cpp.o: \
+ C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\!Sketches\STM32\stm_test\build\sketch\stm_test.ino.cpp \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\cores\arduino/Arduino.h \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\cores\arduino/wiring.h \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\cores\arduino/avr/dtostrf.h \

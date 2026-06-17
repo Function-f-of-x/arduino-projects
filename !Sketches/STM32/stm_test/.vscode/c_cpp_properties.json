@@ -3,8 +3,8 @@
     {
       "name": "Arduino",
       "includePath": [
-        "C:\\Users\\Klim\\Documents\\Arduino\\libraries/**",
-        "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\stm_test/**",
+        "c:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\libraries/**",
+        "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\!Sketches\\STM32\\stm_test/**",
         "C:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\cores\\arduino\\avr/**",
         "C:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\cores\\arduino\\stm32/**",
         "C:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\libraries\\SrcWrapper\\inc/**",
@@ -40,7 +40,7 @@
         "-DUSE_HAL_DRIVER",
         "-DUSE_FULL_LL_DRIVER",
         "-mthumb",
-        "@C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\stm_test\\build/sketch/build.opt",
+        "@C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\!Sketches\\STM32\\stm_test\\build/sketch/build.opt",
         "-c",
         "-Os",
         "-flto",
@@ -56,7 +56,7 @@
         "-fno-exceptions",
         "-fno-use-cxa-atexit",
         "-MMD",
-        "-IC:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\stm_test",
+        "-IC:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\!Sketches\\STM32\\stm_test",
         "-IC:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\cores\\arduino/avr",
         "-IC:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\cores\\arduino/stm32",
         "-IC:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\cores\\arduino/../../libraries/SrcWrapper/inc",
@@ -88,9 +88,9 @@
         "-IC:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\cores\\arduino",
         "-IC:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\variants\\STM32F1xx\\F103C4T_F103C6(T-U)",
         "-IC:\\Users\\Klim\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.12.0\\libraries\\SrcWrapper\\src",
-        "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\stm_test\\build\\sketch\\stm_test.ino.cpp",
+        "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\!Sketches\\STM32\\stm_test\\build\\sketch\\requiredLibraries.cpp",
         "-o",
-        "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\Arduino\\!Sketches\\stm_test\\build\\sketch\\stm_test.ino.cpp.o"
+        "C:\\Users\\Klim\\VS Coding\\GitHub\\arduino-projects\\!Sketches\\STM32\\stm_test\\build\\sketch\\requiredLibraries.cpp.o"
       ],
       "defines": [
         "VECT_TAB_OFFSET=0x0",

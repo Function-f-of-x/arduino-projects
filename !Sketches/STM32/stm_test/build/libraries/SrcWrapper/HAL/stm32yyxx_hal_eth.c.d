@@ -1,4 +1,4 @@
-C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\Arduino\!Sketches\stm_test\build\libraries\SrcWrapper\HAL\stm32yyxx_hal_eth.c.o: \
+C:\Users\Klim\VS\ Coding\GitHub\arduino-projects\!Sketches\STM32\stm_test\build\libraries\SrcWrapper\HAL\stm32yyxx_hal_eth.c.o: \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\libraries\SrcWrapper\src\HAL\stm32yyxx_hal_eth.c \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\system/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.c \
  C:\Users\Klim\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.12.0\system/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
