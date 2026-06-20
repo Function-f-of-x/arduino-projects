@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STM32 LED</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #0f172a;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background: #1e293b;
+      padding: 40px;
+      box-shadow: 6px 6px #00000080;
+    }
+
+    .btn-shadow {
+      box-shadow: 6px 6px #00000080;
+      border-radius: 50%;
+    }
+
+    #led-btn {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: none;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #ff0000;
+      color: white;
+    }
+
+    #led-btn.on {
+      background: #00ff00;
+    }
+
+    #led-btn:active {
+      translate: 4px 4px;
+    }
+
+    #status {
+      position: absolute;
+      bottom: 3px;
+      right: 8px;
+      font-size: 18px;
+      color: hsl(217, 33%, 27%);
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="btn-shadow">
+      <button id="led-btn" onclick="toggleLED()">OFF</button>
+    </div>
+  </div>
+  <p id="status">Загрузка...</p>
+  <script>
+    let isLedOn = false;
+    let status = document.getElementById('status');
+    async function toggleLED() {
+      isLedOn = !isLedOn;
+      const btn = document.getElementById('led-btn');
+      btn.textContent = isLedOn ? 'ON' : 'OFF';
+      btn.classList.toggle('on', isLedOn);
+      status.textContent = 'Отправка команды...';
+      try {
+        const response = await fetch('/toggle?state=' + (isLedOn ? '1' : '0'));
+        const data = await response.json();
+        status.textContent = data.message;
+      } catch (e) {
+        status.textContent = 'Ошибка связи!';
+        isLedOn = !isLedOn;
+        btn.textContent = isLedOn ? 'ON' : 'OFF';
+        btn.classList.toggle('on', isLedOn);
+      }
+    }
+    async function getStatus() {
+      buttonClicks = 0;
+      try {
+        const response = await fetch('/status');
+        const data = await response.json();
+        isLedOn = data.state === 1;
+        const btn = document.getElementById('led-btn');
+        btn.textContent = isLedOn ? 'ON' : 'OFF';
+        btn.classList.toggle('on', isLedOn);
+        status.textContent = 'Подключено';
+      } catch (e) {
+        status.textContent = 'Нет связи с ESP';
+      }
+    }
+    getStatus();
+    setInterval(getStatus, 2000);
+  </script>
+</body>
+
+</html>
