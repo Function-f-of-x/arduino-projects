@@ -6,6 +6,10 @@ const char* password = "2wsx2wsx2wsx";
 
 ESP8266WebServer server(80);
 bool ledState = false;
+bool stmConnected = false;
+unsigned long lastSyncAttempt = 0;
+unsigned long lastPingSent = 0;
+bool waitingForPong = false;
 
 const char indexHtml[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
@@ -62,7 +66,7 @@ const char indexHtml[] PROGMEM = R"rawliteral(
     }
 
     #led-btn:active {
-      translate: 4px 4px;
+      transform: translate(4px, 4px);
     }
 
     #status {
@@ -70,7 +74,7 @@ const char indexHtml[] PROGMEM = R"rawliteral(
       bottom: 3px;
       right: 8px;
       font-size: 18px;
-      color: hsl(217, 33%, 27%);
+      color: #2e405c;
       text-align: right;
     }
   </style>
@@ -104,7 +108,6 @@ const char indexHtml[] PROGMEM = R"rawliteral(
       }
     }
     async function getStatus() {
-      buttonClicks = 0;
       try {
         const response = await fetch('/status');
         const data = await response.json();
@@ -119,22 +122,26 @@ const char indexHtml[] PROGMEM = R"rawliteral(
     }
     getStatus();
     setInterval(getStatus, 2000);
-    </script>
-    </body>
-    
-    </html>
+  </script>
+</body>
+
+</html>
 )rawliteral";
 
 void setup() {
   Serial.begin(115200);
   delay(1000);
-  while (!Serial.available()) {
-    serialPOST("WAITING");
-    delay(2000);
-  }
+
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
-  serialPOST(WiFi.localIP().toString());
+  while (WiFi.status() != WL_CONNECTED) {
+    serialPOST("CONNECTING");
+    if (Serial.available()) {
+      serialGET();
+    }
+    delay(500);
+  }
+  serialPOST("READY:" + WiFi.localIP().toString());
 
   server.on("/", handleRoot);
   server.on("/toggle", handleToggle);
@@ -144,18 +151,36 @@ void setup() {
 
 void loop() {
   server.handleClient();
+
   if (Serial.available()) {
     String msg = serialGET();
-    if (msg == "LED:ON") {
+    if (msg == "ON") {
       ledState = true;
-    } else if (msg == "LED:OFF") {
+      stmConnected = true;
+    } else if (msg == "OFF") {
       ledState = false;
+      stmConnected = true;
+    } else if (msg == "PONG") {
+      waitingForPong = false;
+      stmConnected = true;
+    }
+  }
+
+  if (millis() - lastSyncAttempt > 1000) {
+    lastSyncAttempt = millis();
+    if (!waitingForPong) {
+      serialPOST("PING");
+      waitingForPong = true;
+      lastPingSent = millis();
+    } else if (millis() - lastPingSent > 3000) {
+      stmConnected = false;
+      waitingForPong = false;
     }
   }
 }
 
 void serialPOST(String msg) {
-  serialPOST("POST:" + msg);
+  Serial.println("POST:" + msg);
 }
 
 String serialGET() {
@@ -164,7 +189,8 @@ String serialGET() {
     return "";
   }
   msg.replace("POST:", "");
-  serialPOST("GET:" + msg);
+  msg.trim();
+  Serial.println("GET:" + msg);
   return msg;
 }
 
@@ -176,15 +202,15 @@ void handleToggle() {
   String state = server.arg("state");
   ledState = (state == "1");
   if (ledState) {
-    serialPOST("CMD:ON");
+    serialPOST("ON");
   } else {
-    serialPOST("CMD:OFF");
+    serialPOST("OFF");
   }
   String json = "{\"state\":" + String(ledState ? 1 : 0) + ",\"message\":\"Отправлено\"}";
   server.send(200, "application/json", json);
 }
 
 void handleStatus() {
-  String json = "{\"state\":" + String(ledState ? 1 : 0) + "}";
+  String json = "{\"state\":" + String(ledState ? 1 : 0) + ",\"stmConnected\":" + String(stmConnected ? "true" : "false") + "}";
   server.send(200, "application/json", json);
 }

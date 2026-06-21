@@ -52,7 +52,7 @@
     }
 
     #led-btn:active {
-      translate: 4px 4px;
+      transform: translate(4px, 4px);
     }
 
     #status {
@@ -60,7 +60,7 @@
       bottom: 3px;
       right: 8px;
       font-size: 18px;
-      color: hsl(217, 33%, 27%);
+      color: #2e405c;
       text-align: right;
     }
   </style>
@@ -94,7 +94,6 @@
       }
     }
     async function getStatus() {
-      buttonClicks = 0;
       try {
         const response = await fetch('/status');
         const data = await response.json();
